@@ -17,8 +17,10 @@ RUN --mount=type=cache,target="/var/cache/apt",sharing=locked \
     set -eux; \
     apt-get update; \
     apt-get upgrade -y; \
-    apt install --no-install-recommends -y  \
-        tesseract-ocr tesseract-ocr-chi-sim tesseract-ocr-chi-tra tesseract-ocr-deu git; \
+    apt install --no-install-recommends -y \
+        tesseract-ocr \
+        tesseract-ocr-vie \
+        git; \
     apt-get autoremove -y
 
 # Install base requirements
